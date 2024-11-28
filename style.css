@@ -1,0 +1,244 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Define the width of the navbar */
+    max-width: 1200px; /* Max width for the navbar */
+    margin: 0 auto; /* Centers the navbar */
+}
+
+#main-developer {
+    font-size: 36px; /* Larger font size for h1 */
+    font-weight: bold;
+}
+
+.navigation-items {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation-items li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navigation-items li a:hover {
+    color: #007bff;
+}
+
+/* Main Content Layout */
+main {
+    max-width: 1200px;  /* Define max width to center content */
+    margin: 0 auto;     /* Centers the content */
+    padding: 20px;
+}
+
+/* About Me Section */
+#about-me {
+    display: flex;
+    flex-direction: row; /* Alineamos imagen y texto en fila */
+    justify-content: space-between; /* Espacio entre imagen y texto */
+    padding: 40px;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column; /* Apilamos social links y teléfono debajo de la imagen */
+    gap: 20px;               /* Espaciado entre elementos */
+    align-items: flex-start;
+}
+
+.about-me-text-container {
+    max-width: 60%; /* Definimos un ancho máximo para el texto, para que no ocupe toda la línea */
+    flex-shrink: 0;  /* Evita que el contenedor de texto se encoja */
+    text-align: left;
+}
+
+.about-me-text {
+    text-align: left;
+}
+
+.about-me-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-me-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.portrait {
+    width: 100px; /* Tamaño más grande de la imagen */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ddd;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+#projects,
+#skills {
+    padding: 40px;
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 32px; /* Set all h2 to the same font size */
+    margin-bottom: 20px;
+    text-align: left; /* Align h2 to the left */
+}
+
+.projects-container, .skills-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.projects-container h3 a{
+    text-decoration: none;
+    color: #333;
+}
+
+.projects-container h3 a:hover{
+    font-size: 30px;
+    color: #007bff;
+}
+
+.skills-container i {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Skills Section */
+.skills-container i {
+    font-size: 40px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+/* Media Queries for Mobile and Tablet */
+@media (max-width: 768px) {
+    /* Navigation Bar */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #main-developer {
+        margin-bottom: 20px;
+    }
+
+    .navigation-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* About Me Section */
+    #about-me {
+        flex-direction: column; /* En pantallas pequeñas, apilamos texto e imagen */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-text {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .portrait {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Projects Section */
+    #projects {
+        padding: 20px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Skills Section */
+    .skills-container {
+        justify-content: center;
+    }
+
+    .skills-container i {
+        font-size: 30px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 769px) {
+    .about-me-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-me-text-container {
+        max-width: 60%; /* Mantén el ancho del texto para pantallas grandes */
+    }
+
+    .portrait {
+        width: 200px;
+        height: 200px;
+    }
+}
